@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>How would your computer rank among the fastest computers in the world?</title>
+  <meta charset="utf-8">
+  <meta name="description" content="How would your computer rank among the fastest computers in the world?">
+  <meta name="author" content="">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>How would your computer rank among the fastest computers in the world?</h1>
+    <h2></h2>
+    <p><br/></p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <article data-timings="">
+    <style>
+
+code {
+  font-size: 70%;
+  font-family: "Source Code Pro", monospace;
+  color: darkred;
+  text-align: left;
+}
+
+a {
+color : #aa0000;
+border-bottom:thin solid #aa0000;
+}
+h1,h2,h3,h4 {
+  font-family: 'Open Sans','Helvetica', 'Crimson Text', 'Garamond',  'Palatino', sans-serif;
+
+color: #aa0000;
+}
+.title-slide {
+  background-color: #aa0000; /* #EDE0CF; ; #CA9F9D*/
+  color: white;
+}
+
+.title-slide hgroup > h1, 
+.title-slide hgroup > h2 {
+  color: white ;  /* ; #EF5150*/
+}
+
+table {
+  border: none;
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 22px;
+  line-height: 26px;
+  font-family: 'Open Sans','Helvetica', 'Crimson Text', 'Garamond',  'Palatino', sans-serif;
+  font-weight: bolder;
+}
+table thead {
+  border-top: 1px solid #aa0000;
+  border-bottom: 1px solid #aa0000;
+}
+table th, table td, table caption {
+  margin: 0;
+  padding: 2pt 6pt;
+  text-align: left;
+  vertical-align: top;
+}
+table th {
+  background: #FFCCCC;
+  color: #444;
+  text-transform: none;
+
+}
+table td {
+  border-top: 1px solid #aa0000;
+
+  border-bottom: 1px solid #aa0000;
+}
+table tr:nth-child(2n+1) {
+  background: #FFE6E6;
+}
+
+slide:not(.segue) h2{
+    font-family: 'Open Sans','Helvetica', 'Crimson Text', 'Garamond',  'Palatino', sans-serif;
+  font-size: 52px;
+  font-style: normal;
+  font-weight: bold;
+  text-transform: normal;
+  letter-spacing: -2px;
+  line-height: 1.2em;
+  color: #aa0000;
+}
+</style>
+
+<h2>Computational power since 1993</h2>
+
+<p><br></p>
+
+<div style='float:left;width:48%;' class='centered'>
+  <p>The Top500 list ranks the 500 most powerful computers in the world and has been released twice a year, since 1993.</p>
+
+<p>This list allows us to keep track of computer evolution, for instance, computing power.</p>
+
+<pre><code class="r">flops &lt;- read.table(&quot;flops.txt&quot;)
+fitsum &lt;- lm(log(sum, base = 2) ~ adate, data = flops)
+ratesum &lt;- fitsum$coefficients[2]
+2^ratesum
+</code></pre>
+
+<pre><code>## adate 
+##  1.84
+</code></pre>
+
+<p>The computing power is multiplied by approximately 1.8 every year.</p>
+
+<p>Then, your computer could be as powerful as a supercomputer of the nineties!</p>
+
+</div>
+<div style='float:right;width:48%;'>
+  <p>Computational power of the fastest machine and the 500th at every ranking, as well as the sum of the power of all 500 machines in the list.</p>
+
+<p><img src="assets/fig/unnamed-chunk-3.png" alt="plot of chunk unnamed-chunk-3"> </p>
+
+<p>The \(y\) scale is <em>logarithmic</em> and the units are:</p>
+
+<table><thead>
+<tr>
+<th align="center">GFLOPs</th>
+<th align="center">TFLOPs</th>
+<th align="center">PFLOPs</th>
+<th align="center">EFLOPs</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="center">\(10^9\) FLOPs</td>
+<td align="center">\(10^{12}\) FLOPs</td>
+<td align="center">\(10^{15}\) FLOPs</td>
+<td align="center">\(10^{18}\) FLOPs</td>
+</tr>
+</tbody></table>
+
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-2" style="background:;">
+  <hgroup>
+    <h2>Computing power: definitions</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Computing power is measured in <em>FLOPs</em> (Floating Point Operations Per Second).
+The <em>theoretical</em> (or peak) computing power \(R_{peak}\) can be computed as follows:</p>
+
+<p><center>
+\(R_{peak}\) = Number of cores \(\times\) Frequency \(\times\) Operations per clock cycle
+</center></p>
+
+<p>The <em>measured</em> comuting power \(R_{max}\) is the computing power as measured by a specific benchmark application, the <em>High Performance Linpack</em>.</p>
+
+<p>The <em>efficiency</em> is defined as \(R_{max}/R_{peak}\). For desktop and laptop computers with standard Intel processors, this value is between 80 and 95%.</p>
+
+<h3>A quick comparison</h3>
+
+<table>
+<tr>
+<td>
+429th fastest machine<br>
+in June 1994<br>
+20 MHz<br>
+512 cores<br>
+$R_{max}$ : 1.0 GFLOPs
+</td>
+<td>
+MacBook Air from 2010<br>
+Frequency: 1.4 GHz<br>
+2 cores<br>
+Efficiency: 90%<br>
+$R_{max}$ : 10.08 GFLOPs
+</td>
+<td>
+fastest machine<br>
+today<br>
+GPUs<br>
+3'120'000 cores<br>
+$R_{max}$ : 33'862'700 GFLOPs
+</td>
+</tr>
+</table>
+
+<p><center>
+<a href="https://rezzonic.shinyapps.io/PeerAsst/">Now you play</a>
+</center></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>Other facts about supercomputers</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div style='float:left;width:48%;' class='centered'>
+  <p><center></p>
+
+<h4>Machines by operating systems</h4>
+
+<p></center></p>
+
+<p><img src="assets/fig/unnamed-chunk-4.png" alt="plot of chunk unnamed-chunk-4"> </p>
+
+<p>Historically, high performance computing was dominated by proprietary UNIX operating systems. Today, 96% of the 500 most powerful computers in the world run Linux. </p>
+
+</div>
+<div style='float:right;width:48%;'>
+  <p><center></p>
+
+<h4>Fastest computers, today</h4>
+
+<p></center></p>
+
+<table><thead>
+<tr>
+<th align="right">Rank</th>
+<th>Country</th>
+<th align="right">RMax [PFLOPs]</th>
+<th align="right">Electricity [MW]</th>
+<th align="center">Accelerator</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="right">1</td>
+<td>China</td>
+<td align="right">33.9</td>
+<td align="right">17.8</td>
+<td align="center">Phi</td>
+</tr>
+<tr>
+<td align="right">2</td>
+<td>USA</td>
+<td align="right">17.6</td>
+<td align="right">8.2</td>
+<td align="center">NVIDIA</td>
+</tr>
+<tr>
+<td align="right">3</td>
+<td>USA</td>
+<td align="right">17.2</td>
+<td align="right">7.9</td>
+<td align="center">--</td>
+</tr>
+<tr>
+<td align="right">4</td>
+<td>Japan</td>
+<td align="right">10.5</td>
+<td align="right">12.7</td>
+<td align="center">--</td>
+</tr>
+<tr>
+<td align="right">5</td>
+<td>USA</td>
+<td align="right">8.6</td>
+<td align="right">3.9</td>
+<td align="center">--</td>
+</tr>
+<tr>
+<td align="right">6</td>
+<td>Switzerland</td>
+<td align="right">6.3</td>
+<td align="right">2.3</td>
+<td align="center">NVIDIA</td>
+</tr>
+<tr>
+<td align="right">7</td>
+<td>USA</td>
+<td align="right">5.2</td>
+<td align="right">3.5</td>
+<td align="center">Phi</td>
+</tr>
+<tr>
+<td align="right">8</td>
+<td>Germany</td>
+<td align="right">5.0</td>
+<td align="right">2.3</td>
+<td align="center">--</td>
+</tr>
+<tr>
+<td align="right">9</td>
+<td>USA</td>
+<td align="right">4.3</td>
+<td align="right">2.0</td>
+<td align="center">--</td>
+</tr>
+<tr>
+<td align="right">10</td>
+<td>USA</td>
+<td align="right">3.1</td>
+<td align="right">N/A</td>
+<td align="center">--</td>
+</tr>
+</tbody></table>
+
+<p>With great computing power comes great electricity consumption. For comparison, a town of 5&#39;000 inhabitants uses approximately 5 MW.</p>
+
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>References</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>The Top500 list: <a href="http://www.top500.org">http://www.top500.org</a></li>
+<li>HPL benchmark: <a href="http://www.netlib.org/benchmark/hpl/">http://www.netlib.org/benchmark/hpl/</a></li>
+</ul>
+
+<h2>For more information</h2>
+
+<ul>
+<li><a href="https://www.coursera.org/course/scicomp">Coursera class on High Performance Scientific Computing</a></li>
+<li>If you want to run HPL: <a href="http://hpl-calculator.sourceforge.net">HPL Calculator</a></li>
+</ul>
+
+<h2>Wikipedia entries</h2>
+
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/TOP500">Top500</a></li>
+<li><a href="http://en.wikipedia.org/wiki/FLOPS">FLOPs</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Supercomputer">Supercomputer</a></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title=''>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Computing power: definitions'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Other facts about supercomputers'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='References'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- MathJax: Fall back to local if CDN offline but local image fonts are not supported (saves >100MB) -->
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        processEscapes: true
+      }
+    });
+  </script>
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <!-- <script src="https://c328740.ssl.cf1.rackcdn.com/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script> -->
+  <script>window.MathJax || document.write('<script type="text/x-mathjax-config">MathJax.Hub.Config({"HTML-CSS":{imageFont:null}});<\/script><script src="libraries/widgets/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"><\/script>')
+</script>
+<!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
